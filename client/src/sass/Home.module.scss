@@ -1,0 +1,49 @@
+.heading {
+    // text-align: center;
+    font-size: 3rem;
+}
+.wrapper {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../images/space.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Comfortaa";
+}
+.title {
+    font-size: 8rem;
+    font-family: "Bebas Neue";
+    color: #fff;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+}
+.subtitle {
+    color: #fff;
+    font-size: 2rem;
+}
+.button {
+    background-color: rgb(255, 40, 2);
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-family: "Comfortaa";
+    color: #fff;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.2s all ease;
+    &:hover {
+        background-color: rgb(207, 31, 0);
+    }
+}

@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+}
+.wrapper {
+    width: 100%;
+    padding: 0px 30px;
+    background-color: rgb(223, 223, 223);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.logo {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.2rem;
+    color: rgb(255, 40, 2);
+}
+.centerLinks {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Comfortaa', cursive;
+    margin-right: 30px;
+}
+.navLink {
+    font-size: 1.2rem;
+    font-family: 'Comfortaa', cursive;
+    margin: 0 20px;
+    color: #000;
+    &:first-child {
+        color: #000;
+    }
+}

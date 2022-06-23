@@ -3,9 +3,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const app = express();
+const Register = require('./routes/Register');
 dotenv.config();
 app.use(express.json());
 app.use(cors());
+app.use('/users', Register);
 
 mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true })
 .then(() => {
