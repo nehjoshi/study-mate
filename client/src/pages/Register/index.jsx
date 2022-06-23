@@ -19,13 +19,6 @@ export default function Register() {
         if (email !== "" && firstName !== "" && lastName !== "" && grade !== "Choose your grade" && phone !== "") {
             setAllowProceed(true);
         }
-        if (success) {
-            setFirstName("");
-            setLastName("");
-            setGrade("Choose your grade");
-            setEmail("");
-            setPhone("");
-        }
     }, [firstName, lastName, email, phone, grade, success])
 
     const handleSubmit = () => {
@@ -73,7 +66,7 @@ export default function Register() {
                     <Button disabled={!allowProceed} onClick={handleSubmit} variant="contained" color="primary" fullWidth className={styles.button} size="large">Sign up</Button>
                 }
                 {loading && !success && <CircularProgress className={styles.progress} />}
-                {success && <p className={styles.success}>Successfully registered</p>}
+                {success && <p className={styles.success}>Thank you. Please check your email to complete your registration.</p>}
                 {error && <p className={styles.error}>That email has been taken. Please choose another email.</p>}
             </div>
 
