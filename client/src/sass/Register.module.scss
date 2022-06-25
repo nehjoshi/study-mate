@@ -1,4 +1,5 @@
 $orange: rgb(255, 40, 2);
+
 .wrapper {
     height: 100vh;
     width: 100%;
@@ -6,11 +7,12 @@ $orange: rgb(255, 40, 2);
     justify-content: center;
     align-items: center;
     background-color: #141446;
-opacity: 1;
-background-image:  linear-gradient(#0c0e3a 2px, transparent 2px), linear-gradient(90deg, #0c0e3a 2px, transparent 2px), linear-gradient(#0c0e3a 1px, transparent 1px), linear-gradient(90deg, #0c0e3a 1px, #141446 1px);
-background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
-background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+    opacity: 1;
+    background-image: linear-gradient(#0c0e3a 2px, transparent 2px), linear-gradient(90deg, #0c0e3a 2px, transparent 2px), linear-gradient(#0c0e3a 1px, transparent 1px), linear-gradient(90deg, #0c0e3a 1px, #141446 1px);
+    background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
 }
+
 .box {
     width: 25%;
     min-height: 600px;
@@ -21,21 +23,26 @@ background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
+
 .heading {
     font-family: "Bebas Neue", cursive;
     text-align: center;
     font-size: 2.5rem;
     letter-spacing: 2px;
 }
+
 .form {
     font-family: "Comfortaa", cursive;
     margin-top: 20px;
 }
+
 .info {
     color: $orange;
     font-size: 1.5rem;
 }
+
 .row {
     display: flex;
     flex-direction: row;
@@ -43,23 +50,48 @@ background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
     align-items: center;
     margin-top: 20px;
 }
+
 .button {
     background-color: $orange;
+
     &:hover {
         background-color: rgb(208, 31, 0);
     }
 }
+
 .progress {
     margin: 0 auto;
     display: block;
 }
-.success, .error {
+
+.success,
+.error {
     font-size: 1.3rem;
     color: #047c24;
     font-family: "Comfortaa", cursive;
     margin-top: 20px;
     text-align: center;
 }
+
 .error {
     color: #ff0000;
+}
+
+.forgotPassword {
+    margin-top: 5px;
+    width: fit-content;
+
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+.noAccount {
+    font-family: "Comfortaa", cursive;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    width: fit-content;
 }

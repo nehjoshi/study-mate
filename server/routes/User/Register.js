@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
-const User = require("../models/User");
+const User = require("../../models/User");
 const express = require('express');
 const router = express.Router();
-const transporter = require('../transporter');
+const transporter = require('../../transporter');
 const crypto = require('crypto');
 const bcrypt = require('bcryptjs');
 

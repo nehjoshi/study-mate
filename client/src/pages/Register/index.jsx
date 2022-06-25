@@ -4,6 +4,7 @@ import { Select, TextField, MenuItem, Button, CircularProgress } from "@mui/mate
 import { useState } from "react";
 import { SubmitData } from "./handler";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 export default function Register() {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
@@ -68,6 +69,7 @@ export default function Register() {
                 {loading && !success && <CircularProgress className={styles.progress} />}
                 {success && <p className={styles.success}>Thank you. Please check your email to complete your registration.</p>}
                 {error && <p className={styles.error}>That email has been taken. Please choose another email.</p>}
+                <p className={styles.noAccount}><Link to='/login'>I already have an account</Link></p>
             </div>
 
         </div>
