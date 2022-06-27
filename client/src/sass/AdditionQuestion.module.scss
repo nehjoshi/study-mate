@@ -1,0 +1,51 @@
+.wrapper {
+    padding: 20px 20px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: 20px 0px;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 20px;
+}
+.fixedBox {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin: 0px 5px;
+}
+.plus {
+    color: #0085fa;
+    font-size: 1.8rem;
+}
+.answerBox {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin: 0px 5px;
+    border: 1px solid gray;
+    position: relative;
+}
+.answerInput {
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 2rem;
+    text-align: center;
+}
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }

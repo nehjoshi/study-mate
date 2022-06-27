@@ -35,6 +35,10 @@ const Schema = mongoose.Schema({
     profileComplete: {
         type: Boolean,
         default: false
+    },
+    numberOfHomeworks: {
+        type: Number,
+        default: 0
     }
 })
 const User = mongoose.model('User', Schema);

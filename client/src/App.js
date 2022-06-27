@@ -7,6 +7,8 @@ import "./sass/Global.module.scss";
 import UserContext, { UserProvider } from './context/UserContext';
 import GetStarted from './pages/GetStarted';
 import { useContext } from 'react';
+import ViewHomework from './pages/ViewHomework';
+import Homework from './pages/Homework';
 
 export default function App() {
 
@@ -21,6 +23,8 @@ export default function App() {
           <Route exact path='/login' element={<Login />} />
           <Route exact path='/register/verifyEmail/:token' element={<CompleteRegistration />} />
           <Route exact path='/getStarted' element={<GetStarted />} />
+          <Route exact path='/homework' element={<ViewHomework />} />
+          <Route exact path='/homework/addition-grade-2' element={<Homework />} />
 
         </Routes>
       </BrowserRouter>

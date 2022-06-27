@@ -1,0 +1,38 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    max-width: 350px;
+}
+.iconWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-bottom: 0.2px solid rgb(205, 205, 205);
+    padding: 20px 0px;
+}
+.icon {
+    font-size: 6rem;
+    color: rgb(201, 201, 201);
+}
+.body {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    width: 100%;
+    h4 {
+        font-size: 1.3rem;
+        text-align: left;
+        color: rgb(66, 66, 66);
+    }
+}
+.description {
+    font-size: 1.1rem;
+    margin-top: 5px;
+    text-align: left;
+    color: rgb(165, 165, 165);
+}
