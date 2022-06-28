@@ -1,21 +1,26 @@
 import styles from "../../sass/GetStarted.module.scss";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { Navbar } from "../../components/Navbar";
 import { useContext } from "react";
 import UserContext from "../../context/UserContext";
-import axios from "axios";
 import Sidebar from "../../components/Sidebar";
 import CourseCard from "../../components/CourseCard";
 import { useNavigate } from "react-router-dom";
-
+import { FetchDetails } from "../../utils/FetchDetails";
 
 export default function ViewHomework() {
     const { user } = useContext(UserContext);
-    const [question, setQuestion] = useState({});
     const navigate = useNavigate();
 
     useEffect(() => {
-        document.title = "HelperCloud | View your Homework";
+        document.title = "StudyMate | View your Homework";
+        FetchDetails(user.email, user.token)
+            .then(res => {
+                console.log(res.data);
+            })
+            .catch(err => {
+                window.location.href = "/login";
+            })
     })
 
     return (
@@ -31,7 +36,7 @@ export default function ViewHomework() {
                     <h4 className={styles.subjectTitle}>Maths - Grade 2</h4>
                     <div className={styles.courseWrapper} onClick={() => navigate('/homework/addition-grade-2')}>
                         <CourseCard name="Addition" grade="2" desc="A course for learning basic maths - addition, subtraction and multiplication" />
-                        
+
                     </div>
                 </div>
             </div>

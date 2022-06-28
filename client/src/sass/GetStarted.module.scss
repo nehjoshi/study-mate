@@ -9,6 +9,7 @@ $textColor: rgb(57, 57, 57);
     width: 100%;
     padding: 20px 20px;
     background-color: rgb(246, 246, 246);
+    position: relative;
 }
 .container {
     display: flex;
@@ -56,4 +57,9 @@ $textColor: rgb(57, 57, 57);
     width: 100%;
     margin-top: 20px;
     margin-bottom: 50px;
+}
+.subheading {
+    font-size: 1.2rem;
+    color: rgb(98, 98, 233);
+    margin: 10px auto;
 }

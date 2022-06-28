@@ -5,6 +5,7 @@ import { IoIosStats } from "react-icons/io";
 import { GiRank2 } from "react-icons/gi";
 import { AiFillStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { MdReviews } from "react-icons/md";
 export default function Sidebar() {
     return (
         <div className={styles.sidebar}>
@@ -21,6 +22,10 @@ export default function Sidebar() {
                     <MdOutlineWork className={styles.sidebarLinkIcon} />
                     <p className={styles.sidebarLinkText}>My Homework</p>
                 </div></Link>
+                <div className={styles.sidebarLink}>
+                    <MdReviews className={styles.sidebarLinkIcon} />
+                    <p className={styles.sidebarLinkText}>Review Questions</p>
+                </div>
                 <div className={styles.sidebarLink}>
                     <IoIosStats className={styles.sidebarLinkIcon} />
                     <p className={styles.sidebarLinkText}>Statistics</p>

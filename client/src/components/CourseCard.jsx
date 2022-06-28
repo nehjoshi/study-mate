@@ -1,6 +1,6 @@
 import styles from "../sass/CourseCard.module.scss";
 import { BsFileEarmarkText } from "react-icons/bs";
-export default function ({ name, desc }) {
+export default function CourseCard ({ name, desc }) {
     return (
         <div className={styles.wrapper}>
             <div className={styles.iconWrapper}>

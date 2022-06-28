@@ -39,6 +39,30 @@ const Schema = mongoose.Schema({
     numberOfHomeworks: {
         type: Number,
         default: 0
+    },
+    tasksCompleted: {
+        type: Array,
+        default: []
+    },
+    points: {
+        type: Number,
+        default: 0
+    },
+    incorrectQuestionsArray: {
+        type: Array,
+        default: []
+    },
+    correctQuestions: {
+        type: Number,
+        default: 0
+    },
+    incorrectQuestions: {
+        type: Number,
+        default: 0
+    },
+    accuracy: {
+        type: Number,
+        default: 0
     }
 })
 const User = mongoose.model('User', Schema);

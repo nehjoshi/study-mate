@@ -17,7 +17,7 @@ export default function GetStarted() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        document.title = "HelperCloud | Get Started";
+        document.title = "StudyMate | Get Started";
         if (!user){
             window.location.href = "/";
         }

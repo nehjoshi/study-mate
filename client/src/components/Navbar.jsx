@@ -9,7 +9,7 @@ export const Navbar = ({ hideExtraOptions, name, homeworks }) => {
 
     const LogOut = () => {
         addUser({});
-        window.location.reload();
+        window.location.href="/";
     }
     return (
         <nav className={styles.wrapper}>
