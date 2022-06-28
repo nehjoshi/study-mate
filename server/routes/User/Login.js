@@ -17,7 +17,7 @@ router.post("/login", async (req, res) => {
         if (decrypted) {
             if (user.isVerified) {
                 const token = GenerateToken(user._id);
-                return res.status(200).send(token);
+                return res.status(200).json({user: user, token: token});
             }
             else return res.status(401).send("Please check your email to complete your registration")
         }

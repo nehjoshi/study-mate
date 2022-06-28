@@ -8,6 +8,8 @@ import { UserProvider } from './context/UserContext';
 import GetStarted from './pages/GetStarted';
 import ViewHomework from './pages/ViewHomework';
 import Homework from './pages/Homework';
+import ReviewQuestions from './pages/ReviewQuestions';
+import Leaderboard from './pages/Leaderboard';
 import { HomeworkProvider } from './context/HomeworkContext';
 
 export default function App() {
@@ -26,7 +28,8 @@ export default function App() {
             <Route exact path='/getStarted' element={<GetStarted />} />
             <Route exact path='/homework' element={<ViewHomework />} />
             <Route exact path='/homework/addition-grade-2' element={<Homework />} />
-
+            <Route exact path='/homework/review' element={<ReviewQuestions />} />
+            <Route exact path="/leaderboard" element={<Leaderboard />} />
           </Routes>
         </BrowserRouter>
       </HomeworkProvider>

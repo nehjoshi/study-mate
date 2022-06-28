@@ -30,8 +30,9 @@ export default function Login() {
         SubmitData(email, password)
             .then(res => {
                 if (res.status === 200) {
-                    document.cookie = `token=${res.data}`;
-                    addUser({email, token: res.data})
+                    document.cookie = `token=${res.data.token}`;
+                    console.log(res.data);
+                    addUser({...res.data.user, token: res.data.token})
                     console.log("User", user);
                     // console.log(res);
                     setLoading(false);

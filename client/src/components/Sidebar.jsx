@@ -30,10 +30,12 @@ export default function Sidebar() {
                     <IoIosStats className={styles.sidebarLinkIcon} />
                     <p className={styles.sidebarLinkText}>Statistics</p>
                 </div>
-                <div className={styles.sidebarLink}>
-                    <GiRank2 className={styles.sidebarLinkIcon} />
-                    <p className={styles.sidebarLinkText}>Leaderboard</p>
-                </div>
+                <Link to="/leaderboard">
+                    <div className={styles.sidebarLink}>
+                        <GiRank2 className={styles.sidebarLinkIcon} />
+                        <p className={styles.sidebarLinkText}>Leaderboard</p>
+                    </div>
+                </Link>
                 <div className={styles.sidebarLink}>
                     <AiFillStar className={styles.sidebarLinkIcon} />
                     <p className={styles.sidebarLinkText}>Purchase Goodies</p>
