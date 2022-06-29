@@ -27,12 +27,10 @@ export default function Register() {
         setError(false);
         SubmitData({ firstName, lastName, email, phone, grade })
             .then(res => {
-                console.log(res);
                 setLoading(false);
                 setSuccess(true);
             })
             .catch(err => {
-                console.log(err.response.status);
                 setLoading(false);
                 setError(true);
             })

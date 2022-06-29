@@ -8,6 +8,10 @@ const Schema = mongoose.Schema({
         type: Array,
         default: []
     },
+    subtractionNormal: {
+        type: Array,
+        default: []
+    }
 })
 const Math = mongoose.model('maths', Schema);
 module.exports = Math;

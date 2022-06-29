@@ -4,9 +4,9 @@ import { Navbar } from "../../components/Navbar";
 import { useContext } from "react";
 import UserContext from "../../context/UserContext";
 import Sidebar from "../../components/Sidebar";
-import CourseCard from "../../components/CourseCard";
 import { useNavigate } from "react-router-dom";
 import { FetchDetails } from "../../utils/FetchDetails";
+import AdditionQuestion from "../../components/AdditionQuestion";
 
 export default function ReviewQuestions() {
     const { user } = useContext(UserContext);
@@ -16,7 +16,6 @@ export default function ReviewQuestions() {
         document.title = "StudyMate | Review your Homework";
         FetchDetails(user.email, user.token)
             .then(res => {
-                console.log(res.data);
             })
             .catch(err => {
                 window.location.href = "/login";
@@ -32,8 +31,15 @@ export default function ReviewQuestions() {
                     <h2 className={styles.heading}>Re Visit Questions you got Wrong</h2>
                 </div><br />
                 <hr className={styles.divider} />
-                <div className={styles.body}>
-                    
+                <div className={styles.body} style={{ alignItems: 'center' }}>
+                    {user.incorrectQuestionsArray.length === 0 ? <h3>You have not answered any questions yet!</h3> :
+                        <>
+
+                            {user.incorrectQuestionsArray.map(question => {
+                                return <AdditionQuestion op={question.question.charAt(3)} hideAnswerBoxes={true} question={question} qno={1} />
+                            })}
+                        </>
+                    }
                 </div>
             </div>
         </div>

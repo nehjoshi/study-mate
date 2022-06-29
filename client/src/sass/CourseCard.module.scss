@@ -24,6 +24,7 @@
     flex-direction: column;
     padding: 10px 10px;
     width: 100%;
+    border-bottom: 0.2px solid rgb(205, 205, 205);
     h4 {
         font-size: 1.3rem;
         text-align: left;
@@ -35,4 +36,25 @@
     margin-top: 5px;
     text-align: left;
     color: rgb(165, 165, 165);
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    width: 100%;
+}
+.button {
+    background-color: #FF2802 !important;
+    color: #fff !important;
+    &:hover {
+        background-color: #cf2102 !important;
+    }
+}
+.buttonGreen {
+    background-color: #00b300 !important;
+    color: #fff !important;
+    &:hover {
+        background-color: #009900 !important;
+    }
 }

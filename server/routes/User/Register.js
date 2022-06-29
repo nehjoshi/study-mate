@@ -23,7 +23,6 @@ router.post("/register", async (req, res) => {
     });
     await user.save()
         .then(() => {
-            console.log("Done");
             transporter.sendMail({
                 from: "studymate.ca@gmail.com",
                 to: email,
@@ -40,7 +39,6 @@ router.post("/register", async (req, res) => {
             return res.status(200).json({ success: true });
         })
         .catch(err => {
-            console.log(err);
             return res.status(500);
         });
 })
@@ -49,13 +47,11 @@ router.get("/verifyEmail/:token", async (req, res) => {
     const user = await User.findOne({ emailToken: token });
     if (!user) return res.status(404).send("User not found");
     user.isVerified = true;
-    console.log(user);
     await user.save()
         .then(() => {
             return res.status(200).send("Email verified");
         })
         .catch(err => {
-            console.log(err);
             return res.status(500);
         })
 })
@@ -71,7 +67,6 @@ router.post("/createPassword/:emailToken", async (req, res) => {
             return res.status(200).send("Password created");
         })
         .catch(err => {
-            console.log(err);
             return res.status(500);
         });
 })

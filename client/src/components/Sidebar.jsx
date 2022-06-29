@@ -22,10 +22,12 @@ export default function Sidebar() {
                     <MdOutlineWork className={styles.sidebarLinkIcon} />
                     <p className={styles.sidebarLinkText}>My Homework</p>
                 </div></Link>
-                <div className={styles.sidebarLink}>
-                    <MdReviews className={styles.sidebarLinkIcon} />
-                    <p className={styles.sidebarLinkText}>Review Questions</p>
-                </div>
+                <Link to="/homework/review">
+                    <div className={styles.sidebarLink}>
+                        <MdReviews className={styles.sidebarLinkIcon} />
+                        <p className={styles.sidebarLinkText}>Review Questions</p>
+                    </div>
+                </Link>
                 <div className={styles.sidebarLink}>
                     <IoIosStats className={styles.sidebarLinkIcon} />
                     <p className={styles.sidebarLinkText}>Statistics</p>

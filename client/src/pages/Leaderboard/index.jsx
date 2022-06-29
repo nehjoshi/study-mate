@@ -15,6 +15,7 @@ export default function Leaderboard() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        document.title = "StudyMate | Leaderboard";
         GetLeaderboard()
             .then(res => {
                 setLeaderboard(res.data);

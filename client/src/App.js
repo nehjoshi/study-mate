@@ -27,7 +27,8 @@ export default function App() {
             <Route exact path='/register/verifyEmail/:token' element={<CompleteRegistration />} />
             <Route exact path='/getStarted' element={<GetStarted />} />
             <Route exact path='/homework' element={<ViewHomework />} />
-            <Route exact path='/homework/addition-grade-2' element={<Homework />} />
+            <Route exact path='/homework/addition-grade-2' element={<Homework op={"+"}/>} />
+            <Route exact path='/homework/subtraction-grade-2' element={<Homework op={"-"}/>} />
             <Route exact path='/homework/review' element={<ReviewQuestions />} />
             <Route exact path="/leaderboard" element={<Leaderboard />} />
           </Routes>

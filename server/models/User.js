@@ -63,6 +63,10 @@ const Schema = mongoose.Schema({
     accuracy: {
         type: Number,
         default: 0
+    },
+    enrolledCourses: {
+        type: Array,
+        default: []
     }
 })
 const User = mongoose.model('User', Schema);

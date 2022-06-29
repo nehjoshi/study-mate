@@ -1,27 +1,39 @@
 import styles from "../../sass/GetStarted.module.scss";
 import { useEffect } from "react";
 import { Navbar } from "../../components/Navbar";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import UserContext from "../../context/UserContext";
 import Sidebar from "../../components/Sidebar";
 import CourseCard from "../../components/CourseCard";
 import { useNavigate } from "react-router-dom";
 import { FetchDetails } from "../../utils/FetchDetails";
+import { CheckIfCompleted } from "./handler";
 
 export default function ViewHomework() {
     const { user } = useContext(UserContext);
     const navigate = useNavigate();
+    const [pendingTasks, setPendingTasks] = useState([]);
+    const [completed, setCompleted] = useState(false);
 
     useEffect(() => {
         document.title = "StudyMate | View your Homework";
         FetchDetails(user.email, user.token)
             .then(res => {
-                console.log(res.data);
+                CheckIfCompleted(user.email)
+                    .then(res => {
+                        if (res.data === true) {
+                            setCompleted(true);
+                        }
+                        
+                        else {
+                            setPendingTasks(res.data);
+                        }
+                    })
             })
             .catch(err => {
                 window.location.href = "/login";
             })
-    })
+    }, [user.email, user.token])
 
     return (
         <div className={styles.wrapper}>
@@ -34,8 +46,15 @@ export default function ViewHomework() {
                 <hr className={styles.divider} />
                 <div className={styles.body}>
                     <h4 className={styles.subjectTitle}>Maths - Grade 2</h4>
-                    <div className={styles.courseWrapper} onClick={() => navigate('/homework/addition-grade-2')}>
-                        <CourseCard name="Addition" grade="2" desc="A course for learning basic maths - addition, subtraction and multiplication" />
+                    <div className={styles.courseWrapper} >
+
+                        {!completed && pendingTasks.map((task, index) => {
+                            return (
+                                <CourseCard type={task.type} name={task.name} key={index} grade="2" desc="A course for learning basic maths - addition, subtraction and multiplication" />
+                            )
+                        })}
+
+                    {completed && <p>You have completed all tasks for today!</p>}
 
                     </div>
                 </div>

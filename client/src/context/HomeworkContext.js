@@ -11,12 +11,9 @@ export function HomeworkProvider({ children }) {
         objectToModify.clientAnswer = clientAnswer;
         old[key] = objectToModify;
         setHomework(old);
-        console.log(homework);
     }
     const setOriginalQuestions = (questions) => {
         setHomework(questions);
-        console.log("QUESTIONS FROM CONTEXT")
-        console.log(questions)
     }
     return (
         <HomeworkContext.Provider value = {{ homework, updateHomework, setOriginalQuestions }}>

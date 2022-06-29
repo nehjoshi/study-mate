@@ -21,7 +21,6 @@ export default function CompleteRegistration() {
                 setLoading(false);
             })
             .catch(err => {
-                console.log(err.response.status);
                 setFailedVerificationError(true);
                 setLoading(false);
             })
@@ -35,7 +34,6 @@ export default function CompleteRegistration() {
                 setSuccess(true);
             })
             .catch(err => {
-                console.log(err.response.status);
                 setSmallLoading(false);
             })
     }

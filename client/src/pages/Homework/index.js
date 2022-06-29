@@ -6,9 +6,9 @@ import axios from "axios";
 import AdditionQuestion from "../../components/AdditionQuestion";
 import HomeworkContext from "../../context/HomeworkContext";
 import { Button } from "@mui/material";
-import { EvaluateAnswers, PostAnswers } from "./handler";
+import { EvaluateAnswers, GetQuestions, PostAnswers } from "./handler";
 import ResultPopup from "../../components/ResultPopup";
-export default function Homework() {
+export default function Homework({ op }) {
     const { user } = useContext(UserContext);
     const { setOriginalQuestions, homework } = useContext(HomeworkContext);
     const [questions, setQuestions] = useState({});
@@ -25,16 +25,14 @@ export default function Homework() {
     }
     useEffect(() => {
         document.title = "StudyMate | Homework"
-        console.log("Token from get started", user.token)
         // document.body.requestFullscreen();
-        axios.get("http://localhost:5000/homework/getAdditionQuestions", config)
+        GetQuestions(config, op)
             .then(res => {
                 let arrayOfQuestions = res.data;
                 const shuffled = arrayOfQuestions.sort(() => 0.5 - Math.random());
                 let selected = shuffled.slice(0, 10);
                 setQuestions(selected);
                 setOriginalQuestions(selected);
-                console.log(selected)
                 setLoading(false);
             })
     }, [user.token, user.email])
@@ -46,8 +44,8 @@ export default function Homework() {
         setIncorrectArray(incorrectArray);
         setPoints(points);
         setPopup(true);
-        console.log(correct)
-        PostAnswers(correct, incorrect, incorrectArray, points, user.email, user);
+        let type = op === "+" ? "addition" : "subtraction";
+        PostAnswers(correct, incorrect, incorrectArray, points, user.email, user, type);
 
     }
 
@@ -55,12 +53,12 @@ export default function Homework() {
         <div className={styles.wrapper} >
             <Navbar hideExtraOptions />
             <div className={styles.container} style={{ margin: "70px auto", width: "80%", padding: "20px 20px" }}>
-                <h1 className={styles.heading}><center>Addition</center></h1>
+                <h1 className={styles.heading}><center>{op === "+" ? "Addition" : "Subtraction"}</center></h1>
                 <p className={styles.subheading}><center>Answer the following 10 questions in the boxes provided.</center></p>
                 <div className={styles.questionWrapper} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 
                     {!loading && questions.map((question, index) => {
-                        return <AdditionQuestion question={question} key={index} qno={index} />
+                        return <AdditionQuestion op={op} question={question} key={index} qno={index} />
                     })}
                 </div>
                 <Button size="large" variant="contained" color="primary" style={{ margin: "20px auto" }} onClick={SubmitAnswers}>Submit</Button>
