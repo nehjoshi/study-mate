@@ -46,9 +46,9 @@ export default function GetStarted() {
                         <div className={styles.body}>
                             <h4 className={styles.subjectTitle}>Maths - Grade 2</h4>
                             <div className={styles.courseWrapper}>
-                                <CourseCard type="addition" enrolled={false} name="Addition" grade="2" desc="A course for learning basic maths - addition, subtraction and multiplication" />
-                                <CourseCard type="subtraction" enrolled={true} name="Subtraction" grade="2" desc="A course for learning basic maths - addition, subtraction and multiplication" />
-                                <CourseCard name="Multiplication" grade="2" desc="A course for learning basic maths - addition, subtraction and multiplication" />
+                                <CourseCard type="additionNormal" enrolled={false} name="2 Digit Simple Addition" grade="2" desc="Practice simple 2 digit addition questions" />
+                                <CourseCard type="additionWord" enrolled={false} name="Addition Word Problems" grade="2" desc="Practice addition-based word problems." />
+                                <CourseCard type="subtractionNormal" enrolled={true} name="2 Digit Simple Subtraction" grade="2" desc="Practice simple 2 digit subtraction questions" />
                                 <CourseCard name="Division" grade="2" desc="A course for learning basic maths - addition, subtraction and multiplication" />
                                 <CourseCard name="Percentages" grade="2" desc="A course for learning basic maths - addition, subtraction and multiplication" />
                             </div>

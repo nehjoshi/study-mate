@@ -1,0 +1,38 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    background-color: #fafafa;
+    position: relative;
+    margin: 20px 0px;
+    padding: 20px 20px;
+}
+.questionNumber {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.2rem;
+}
+.points {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1rem;
+    color:#0085fa;
+}
+.question {
+    font-size: 1.5rem;
+    margin: 20px 0px;
+    line-height: 40px;
+}
+.label {
+    font-size: 1.4rem;
+    margin: 5px 0px;
+}
+.input {
+    margin: 0px 20px;
+    margin-bottom: 10px;
+    transform: scale(2);
+}

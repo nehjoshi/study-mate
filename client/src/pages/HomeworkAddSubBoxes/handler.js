@@ -25,11 +25,11 @@ export const EvaluateAnswers = (homework) => {
     return { correct, incorrect, incorrectArray, points };
 
 }
-export const PostAnswers = (correct, incorrect, incorrectArray, points, email, user, type) => {
+export const PostAnswers = (correct, incorrect, incorrectArray, points, email, user, type, name) => {
     const config = {
         headers: {
             "Authorization": user.token
         }
     }
-    return axios.post("http://localhost:5000/homework/submit-homework-results", { correct, incorrect, incorrectArray, points, email, type }, config)
+    return axios.post("http://localhost:5000/homework/submit-homework-results", { correct, incorrect, incorrectArray, points, email, type, name }, config)
 }

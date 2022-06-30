@@ -11,6 +11,10 @@ const Schema = mongoose.Schema({
     subtractionNormal: {
         type: Array,
         default: []
+    },
+    additionWord: {
+        type: Array,
+        default: []
     }
 })
 const Math = mongoose.model('maths', Schema);

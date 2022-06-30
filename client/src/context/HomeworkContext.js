@@ -11,6 +11,7 @@ export function HomeworkProvider({ children }) {
         objectToModify.clientAnswer = clientAnswer;
         old[key] = objectToModify;
         setHomework(old);
+        console.log(old);
     }
     const setOriginalQuestions = (questions) => {
         setHomework(questions);

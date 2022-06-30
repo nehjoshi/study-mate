@@ -8,13 +8,13 @@ router.get("/check-if-completed/:email", async (req, res) => {
     let typeList = [];
     if (user.tasksCompleted.length === 0) {
         return res.send([{
-            type: "addition",
-            name: "Addition",
+            type: "additionNormal",
+            name: "2 Digit Addition",
             date: new Date()
         },
         {
-            type: "subtraction",
-            name: "Subtraction",
+            type: "subtractionNormal",
+            name: "2 Digit Subtraction",
             date: new Date()
         }]);
     }

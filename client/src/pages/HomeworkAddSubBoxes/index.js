@@ -44,8 +44,9 @@ export default function Homework({ op }) {
         setIncorrectArray(incorrectArray);
         setPoints(points);
         setPopup(true);
-        let type = op === "+" ? "addition" : "subtraction";
-        PostAnswers(correct, incorrect, incorrectArray, points, user.email, user, type);
+        let type = op === "+" ? "additionNormal" : "subtractionNormal";
+        let name = op === "+" ? "2 Digit Addition" : "2 Digit Subtraction";
+        PostAnswers(correct, incorrect, incorrectArray, points, user.email, user, type, name);
 
     }
 
@@ -53,7 +54,7 @@ export default function Homework({ op }) {
         <div className={styles.wrapper} >
             <Navbar hideExtraOptions />
             <div className={styles.container} style={{ margin: "70px auto", width: "80%", padding: "20px 20px" }}>
-                <h1 className={styles.heading}><center>{op === "+" ? "Addition" : "Subtraction"}</center></h1>
+                <h1 className={styles.heading}><center>{op === "+" ? "2 Digit Addition" : "2 Digit Subtraction"}</center></h1>
                 <p className={styles.subheading}><center>Answer the following 10 questions in the boxes provided.</center></p>
                 <div className={styles.questionWrapper} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 

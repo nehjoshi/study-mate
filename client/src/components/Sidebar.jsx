@@ -3,7 +3,7 @@ import { CgMenuGridR } from "react-icons/cg";
 import { MdOutlineWork } from "react-icons/md";
 import { IoIosStats } from "react-icons/io";
 import { GiRank2 } from "react-icons/gi";
-import { AiFillStar } from "react-icons/ai";
+import { AiFillStar, AiFillTrophy } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { MdReviews } from "react-icons/md";
 export default function Sidebar() {
@@ -41,6 +41,10 @@ export default function Sidebar() {
                 <div className={styles.sidebarLink}>
                     <AiFillStar className={styles.sidebarLinkIcon} />
                     <p className={styles.sidebarLinkText}>Purchase Goodies</p>
+                </div>
+                <div className={styles.sidebarLink}>
+                    <AiFillTrophy className={styles.sidebarLinkIcon} />
+                    <p className={styles.sidebarLinkText}>Contests</p>
                 </div>
             </div>
         </div>
