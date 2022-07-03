@@ -7,6 +7,7 @@ import Sidebar from "../../components/Sidebar";
 import { useNavigate } from "react-router-dom";
 import { FetchDetails } from "../../utils/FetchDetails";
 import AdditionQuestion from "../../components/AdditionQuestion";
+import WordProblem from "../../components/WordProblem";
 
 export default function ReviewQuestions() {
     const { user } = useContext(UserContext);
@@ -35,8 +36,9 @@ export default function ReviewQuestions() {
                     {user.incorrectQuestionsArray.length === 0 ? <h3>You have not answered any questions yet!</h3> :
                         <>
 
-                            {user.incorrectQuestionsArray.map(question => {
-                                return <AdditionQuestion op={question.question.charAt(3)} hideAnswerBoxes={true} question={question} qno={1} />
+                            {user.incorrectQuestionsArray.reverse().map(question => {
+                                return question.option1===undefined ? <AdditionQuestion op={question.question.charAt(3)} hideAnswerBoxes={true} question={question} qno={1} />:
+                                <WordProblem question={question} qno={1} op={"+"} hideInput={true} />
                             })}
                         </>
                     }

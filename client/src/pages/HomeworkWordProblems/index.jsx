@@ -49,7 +49,7 @@ export default function HomeworkWordProblems({ op }) {
         setPoints(points);
         setPopup(true);
         let type = op === "+" ? "additionWord" : "subtractionWord";
-        let name = op === "+" ? "2 Digit Addition" : "2 Digit Subtraction";
+        let name = op === "+" ? "Addition Word Problems" : "Subtraction Word Problems";
         PostAnswers(correct, incorrect, incorrectArray, points, user.email, user, type, name);
 
     }
