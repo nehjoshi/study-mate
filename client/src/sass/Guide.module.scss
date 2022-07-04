@@ -1,0 +1,76 @@
+$orange: #FF2802;
+$lightBlue: #17BEBB;
+$textFont: 'Comfortaa', sans-serif;
+$teal: #0E7C7B;
+$textColor: rgb(57, 57, 57);
+.wrapper {
+    height: fit-content;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px 20px;
+    background-color: rgb(246, 246, 246);
+    position: relative;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 300px);
+    margin-top: 70px;
+    margin-left: 300px;
+    background-color: #fff;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-family: $textFont;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 20px;
+    border-left: 3px solid $orange;
+    p {
+        margin-top: 10px;
+        margin-left: 5px;
+        font-size: 20px;
+        color: rgb(118, 118, 118);
+    }
+}
+.heading {
+    font-size: 2.3rem;
+    color: $textColor;
+}
+.divider {
+    border-top: transparent;
+    border-bottom: 1px solid rgb(207, 207, 207);
+}
+.body {
+    margin-top: 20px;
+    h4 {
+        font-size: 1.5rem;
+        text-align: left;
+        color: rgb(66, 66, 66);
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: 1.3rem;
+        text-align: left;
+        color: rgb(92, 92, 92);
+        margin-bottom: 5px;
+        line-height: 35px;
+    }
+    li {
+        margin-left: 20px;
+    }
+    ul {
+        margin-bottom: 30px;
+    }
+}
+.img1 {
+    height: 350px;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+}
+.result {
+    color: rgb(3, 199, 3) !important;
+}

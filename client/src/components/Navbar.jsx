@@ -2,14 +2,15 @@ import { Link } from "react-router-dom";
 import styles from "../sass/Global.module.scss";
 import { useContext, useState } from "react";
 import UserContext from "../context/UserContext";
-import { Button } from "@mui/material"
+import { Button } from "@mui/material";
+import { FaUser } from "react-icons/fa";
 export const Navbar = ({ hideExtraOptions, name, homeworks }) => {
     const { user, addUser } = useContext(UserContext);
     const [openMenu, setOpenMenu] = useState(false);
 
     const LogOut = () => {
         addUser({});
-        window.location.href="/";
+        window.location.href = "/";
     }
     return (
         <nav className={styles.wrapper}>
@@ -29,6 +30,7 @@ export const Navbar = ({ hideExtraOptions, name, homeworks }) => {
                 {openMenu &&
                     <div className={styles.userMenu}>
                         <div className={styles.userMenuHeader}>
+                            <FaUser className={styles.userMenuIcon} />
                             <p className={styles.userMenuHeaderTitle} style={{ fontSize: '1.3rem' }}><b>{name}</b></p>
                             <p className={styles.userMenuHeaderTitle} style={{ color: "#979797" }}>nehjoshi5@gmail.com</p>
                             <p className={styles.userMenuHeaderTitle} style={{ color: "#979797" }}>#neh_joshi123</p>
@@ -52,7 +54,7 @@ export const Navbar = ({ hideExtraOptions, name, homeworks }) => {
                         <div className={styles.userMenuFooter}>
                             <Button fullWidth variant="contained" onClick={LogOut} className={styles.userMenuFooterButton}>Sign out</Button>
                         </div>
-                        <div className={styles.userMenuFooter} style={{borderBottom: "none"}}>
+                        <div className={styles.userMenuFooter} style={{ borderBottom: "none" }}>
                             <p className={styles.userMenuFooterText}>Privacy Policy</p>
                             <p className={styles.userMenuFooterText}>Terms of Service</p>
                         </div>

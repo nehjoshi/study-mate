@@ -39,6 +39,7 @@
 }
 .footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 10px 10px;
@@ -53,8 +54,16 @@
 }
 .buttonGreen {
     background-color: #00b300 !important;
+    margin: 5px 0px !important;
     color: #fff !important;
     &:hover {
         background-color: #009900 !important;
+    }
+}
+.buttonGuide {
+    background-color: #006bd5 !important;
+    color: #fff !important;
+    &:hover {
+        background-color: #0055aa !important;
     }
 }

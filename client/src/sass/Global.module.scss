@@ -114,6 +114,12 @@ $textFont: 'Comfortaa', sans-serif;
     justify-content: space-between;
     padding: 10px 10px;
 }
+.userMenuIcon {
+    margin: 0px 10px;
+    border-radius: 50%;
+    font-size: 5rem;
+    border: 3px solid rgb(235, 35, 8);
+}
 .userMenuItemText {
     font-size: 1rem;
     font-family: $textFont;

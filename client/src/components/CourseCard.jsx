@@ -52,6 +52,7 @@ export default function CourseCard({ name, desc, type, enrolled }) {
                 :
                 <div className={styles.footer}>
                     <Button onClick={() => navigate(`/homework/${type}-grade-2`)} fullWidth className={styles.buttonGreen}>Start</Button>
+                    <Button onClick={() => navigate(`/guide/${type}-grade-2`)} fullWidth className={styles.buttonGuide}>Read guide</Button>
                 </div>
             }
         </div>

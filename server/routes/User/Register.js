@@ -100,6 +100,7 @@ router.post('/uploadProfilePicture', upload.single('photo'), async (req, res) =>
     const { email } = req.body;
     const user = await User.findOne({ email: email });
     user.photo = req.file.filename;
+    console.log(req.body);
     await user.save()
         .then(() => {
             console.log("Uploaded!")

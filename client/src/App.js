@@ -13,6 +13,7 @@ import Leaderboard from './pages/Leaderboard';
 import { HomeworkProvider } from './context/HomeworkContext';
 import HomeworkWordProblems from './pages/HomeworkWordProblems';
 import UserProfile from './pages/UserProfile';
+import GuideAdditionGrade2 from './pages/Guide/GuideAdditionGrade2';
 
 export default function App() {
 
@@ -33,7 +34,10 @@ export default function App() {
             <Route exact path='/homework/additionNormal-grade-2' element={<Homework op={"+"}/>} />
             <Route exact path='/homework/subtractionNormal-grade-2' element={<Homework op={"-"}/>} />
             <Route exact path='/homework/additionWord-grade-2' element={<HomeworkWordProblems op={"+"}/>} />
+            <Route exact path='/homework/subtractionWord-grade-2' element={<HomeworkWordProblems op={"-"}/>} />
             <Route exact path='/homework/review' element={<ReviewQuestions />} />
+            <Route exact path='/guide/additionNormal-grade-2' element={<GuideAdditionGrade2 />} />
+            <Route exact path='/guide/additionWord-grade-2' element={<GuideAdditionGrade2 />} />
             <Route exact path="/leaderboard" element={<Leaderboard />} />
           </Routes>
         </BrowserRouter>

@@ -11,7 +11,7 @@ import { CircularProgress } from "@mui/material";
 
 
 export default function GetStarted() {
-    const { user } = useContext(UserContext);
+    const { user, addUser } = useContext(UserContext);
     const [question, setQuestion] = useState({});
     const [client, setUserInfo] = useState({});
     const [loading, setLoading] = useState(true);
@@ -46,11 +46,13 @@ export default function GetStarted() {
                         <div className={styles.body}>
                             <h4 className={styles.subjectTitle}>Maths - Grade 2</h4>
                             <div className={styles.courseWrapper}>
-                                <CourseCard type="additionNormal" enrolled={false} name="2 Digit Simple Addition" grade="2" desc="Practice simple 2 digit addition questions" />
+                                <CourseCard type="additionNormal" enrolled={false} name="2 Digit Simple Addition" grade="2" desc="Practice simple 2 digit addition questions." />
                                 <CourseCard type="additionWord" enrolled={false} name="Addition Word Problems" grade="2" desc="Practice addition-based word problems." />
-                                <CourseCard type="subtractionNormal" enrolled={true} name="2 Digit Simple Subtraction" grade="2" desc="Practice simple 2 digit subtraction questions" />
-                                <CourseCard name="Division" grade="2" desc="A course for learning basic maths - addition, subtraction and multiplication" />
-                                <CourseCard name="Percentages" grade="2" desc="A course for learning basic maths - addition, subtraction and multiplication" />
+                                <CourseCard type="subtractionNormal" enrolled={true} name="2 Digit Simple Subtraction" grade="2" desc="Practice simple 2 digit subtraction questions." />
+                                <CourseCard type="subtractionWord" enrolled={false} name="Subtraction Word Problems" grade="2" desc="Practice subtraction word problems." />
+                                <CourseCard type="mixedAdditionSubtraction" name="Mixed Addition and Subtraction" grade="2" desc="Practice a combination of addition and subtraction problems." />
+                                <CourseCard type="multiplicationNormal" name="Single Digit Multiplication" grade="2" desc="Practice your single digit multiplication skills with this module." />
+                                <CourseCard type="multiplicationWord" name="Multiplication Word Problems" grade="2" desc="Practice word problems related to multiplication." />
                             </div>
                             <h4 className={styles.subjectTitle}>Science - Grade 2</h4>
                             <div className={styles.courseWrapper}>
