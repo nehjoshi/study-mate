@@ -67,6 +67,10 @@ const Schema = mongoose.Schema({
     enrolledCourses: {
         type: Array,
         default: []
+    },
+    photo: {
+        type: String,
+        default: ""
     }
 })
 const User = mongoose.model('User', Schema);

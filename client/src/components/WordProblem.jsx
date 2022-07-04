@@ -17,15 +17,15 @@ export default function WordProblem({ question, qno, hideInput, op}) {
             <h3 className={styles.question}>{question.question}</h3>
             <div className={styles.optionsWrapper}>
                 <label className={styles.label}>{question.option1}</label>
-                <input type="checkbox" disabled={question.clientAnswer!==null} value={question.option1} className={styles.input} checked={answer===question.option1} onChange={e => setAnswer(e.target.value.toString())}/>
+                <input type="radio" disabled={hideInput} value={question.option1} className={styles.input} checked={answer===question.option1} onChange={e => setAnswer(e.target.value.toString())}/>
                 <label className={styles.label}>{question.option2}</label>
-                <input type="checkbox" disabled={question.clientAnswer!==null} value={question.option2} className={styles.input} checked={answer===question.option2} onChange={e => setAnswer(e.target.value.toString())}/>
+                <input type="radio" disabled={hideInput} value={question.option2} className={styles.input} checked={answer===question.option2} onChange={e => setAnswer(e.target.value.toString())}/>
                 <label className={styles.label}>{question.option3}</label>
-                <input type="checkbox" disabled={question.clientAnswer!==null} value={question.option3} className={styles.input} checked={answer===question.option3} onChange={e => setAnswer(e.target.value.toString())}/>
+                <input type="radio" disabled={hideInput} value={question.option3} className={styles.input} checked={answer===question.option3} onChange={e => setAnswer(e.target.value.toString())}/>
                 <label className={styles.label}>{question.option4}</label>
-                <input type="checkbox" disabled={question.clientAnswer!==null} value={question.option4} className={styles.input} checked={answer===question.option4} onChange={e => setAnswer(e.target.value.toString())}/>
+                <input type="radio" disabled={hideInput} value={question.option4} className={styles.input} checked={answer===question.option4} onChange={e => setAnswer(e.target.value.toString())}/>
             </div>
-            {hideInput && <p>Your answer: {question.clientAnswer}</p>}
+            {hideInput && <p>Your answer: {question.clientAnswer || "No Answer"}</p>}
             {hideInput && <p>Correct answer: {question.answer}</p>}
         </div>
     )

@@ -5,13 +5,11 @@ import { useContext, useState } from "react";
 import UserContext from "../../context/UserContext";
 import Sidebar from "../../components/Sidebar";
 import CourseCard from "../../components/CourseCard";
-import { useNavigate } from "react-router-dom";
 import { FetchDetails } from "../../utils/FetchDetails";
 import { CheckIfCompleted } from "./handler";
 
 export default function ViewHomework() {
     const { user } = useContext(UserContext);
-    const navigate = useNavigate();
     const [pendingTasks, setPendingTasks] = useState([]);
     const [completed, setCompleted] = useState(false);
 
@@ -42,6 +40,7 @@ export default function ViewHomework() {
             <div className={styles.container}>
                 <div className={styles.header}>
                     <h2 className={styles.heading}>Your homework for today</h2>
+                    <p >You have {pendingTasks.length} homework(s) left</p>
                 </div><br />
                 <hr className={styles.divider} />
                 <div className={styles.body}>

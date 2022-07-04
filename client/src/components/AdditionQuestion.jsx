@@ -77,7 +77,7 @@ export default function AdditionQuestion({ question, qno, hideAnswerBoxes, op })
             </div>
             {hideAnswerBoxes &&
                 <>
-                    <p>Your answer: {question.clientAnswer}</p>
+                    <p>Your answer: {question.clientAnswer || "No Answer"}</p>
                     <p>Correct Answer: {question.answer}</p>
                 </>
             }

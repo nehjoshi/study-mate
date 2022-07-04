@@ -19,14 +19,15 @@ export default function HomeworkWordProblems({ op }) {
     const [incorrect, setIncorrect] = useState(0);
     const [incorrectArray, setIncorrectArray] = useState([]);
     const [points, setPoints] = useState(0);
-    const config = {
-        headers: {
-            "Authorization": user.token
-        }
-    }
+    
 
     useEffect(() => {
         document.title = "Study Mate | Homework";
+        const config = {
+            headers: {
+                "Authorization": user.token
+            }
+        }
         GetQuestions(config, op)
             .then(res => {
                 let arrayOfQuestions = res.data;
@@ -38,7 +39,7 @@ export default function HomeworkWordProblems({ op }) {
                 setLoading(false);
             })
 
-    }, [])
+    }, [user.token, op]);
 
     const SubmitAnswers = () => {
         const { correct, incorrect, incorrectArray, points } = EvaluateAnswers(homework);

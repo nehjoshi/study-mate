@@ -32,21 +32,21 @@ export const Navbar = ({ hideExtraOptions, name, homeworks }) => {
                             <p className={styles.userMenuHeaderTitle} style={{ fontSize: '1.3rem' }}><b>{name}</b></p>
                             <p className={styles.userMenuHeaderTitle} style={{ color: "#979797" }}>nehjoshi5@gmail.com</p>
                             <p className={styles.userMenuHeaderTitle} style={{ color: "#979797" }}>#neh_joshi123</p>
-                            <p className={styles.editProfile}>Edit your Account</p>
+                            <Link to='/profile'><p className={styles.editProfile}>Edit your Account</p></Link>
 
                         </div>
                         <div className={styles.userMenuBody}>
                             <div className={styles.userMenuItem}>
                                 <p className={styles.userMenuItemText}>My points</p>
-                                <p className={styles.userMenuItemText}>20</p>
+                                <p className={styles.userMenuItemText}>{user.points}</p>
                             </div>
                             <div className={styles.userMenuItem}>
                                 <p className={styles.userMenuItemText}>Tasks Completed</p>
-                                <p className={styles.userMenuItemText}>{homeworks}</p>
+                                <p className={styles.userMenuItemText}>{user.numberOfHomeworks}</p>
                             </div>
                             <div className={styles.userMenuItem}>
                                 <p className={styles.userMenuItemText}>Leaderboard Rank</p>
-                                <p className={styles.userMenuItemText}>132</p>
+                                <p className={styles.userMenuItemText}>1</p>
                             </div>
                         </div>
                         <div className={styles.userMenuFooter}>

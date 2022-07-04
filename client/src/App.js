@@ -12,6 +12,7 @@ import ReviewQuestions from './pages/ReviewQuestions';
 import Leaderboard from './pages/Leaderboard';
 import { HomeworkProvider } from './context/HomeworkContext';
 import HomeworkWordProblems from './pages/HomeworkWordProblems';
+import UserProfile from './pages/UserProfile';
 
 export default function App() {
 
@@ -25,6 +26,7 @@ export default function App() {
             <Route exact path='/' element={<Home />} />
             <Route exact path='/register' element={<Register />} />
             <Route exact path='/login' element={<Login />} />
+            <Route exact path='/profile' element={<UserProfile />} />
             <Route exact path='/register/verifyEmail/:token' element={<CompleteRegistration />} />
             <Route exact path='/getStarted' element={<GetStarted />} />
             <Route exact path='/homework' element={<ViewHomework />} />
