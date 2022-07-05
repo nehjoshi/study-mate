@@ -32,7 +32,7 @@ export const Navbar = ({ hideExtraOptions, name, homeworks }) => {
                         <div className={styles.userMenuHeader}>
                             <FaUser className={styles.userMenuIcon} />
                             <p className={styles.userMenuHeaderTitle} style={{ fontSize: '1.3rem' }}><b>{name}</b></p>
-                            <p className={styles.userMenuHeaderTitle} style={{ color: "#979797" }}>nehjoshi5@gmail.com</p>
+                            <p className={styles.userMenuHeaderTitle} style={{ color: "#979797" }}>{user.email}</p>
                             <p className={styles.userMenuHeaderTitle} style={{ color: "#979797" }}>#neh_joshi123</p>
                             <Link to='/profile'><p className={styles.editProfile}>Edit your Account</p></Link>
 

@@ -19,7 +19,7 @@ export default function ViewHomework() {
             .then(res => {
                 CheckIfCompleted(user.email)
                     .then(res => {
-                        if (res.data === true) {
+                        if (res.data === true || res.data === "No tasks completed") {
                             setCompleted(true);
                         }
                         

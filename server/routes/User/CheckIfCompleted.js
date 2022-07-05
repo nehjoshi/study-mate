@@ -6,17 +6,8 @@ router.get("/check-if-completed/:email", async (req, res) => {
     const user = await User.findOne({ email: email });
     let listOfTasks = [];
     let typeList = [];
-    if (user.tasksCompleted.length === 0) {
-        return res.send([{
-            type: "additionNormal",
-            name: "2 Digit Addition",
-            date: new Date()
-        },
-        {
-            type: "subtractionNormal",
-            name: "2 Digit Subtraction",
-            date: new Date()
-        }]);
+    if (user.tasksCompleted.length === 0 && user.enrolledCourses.length === 0) {
+        return res.send("No tasks completed");
     }
     else {
         user.tasksCompleted.reverse().forEach(task => {

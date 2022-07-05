@@ -71,6 +71,10 @@ const Schema = mongoose.Schema({
     photo: {
         type: String,
         default: ""
+    },
+    reminderMailDate: {
+        type: Date,
+        default: new Date()
     }
 })
 const User = mongoose.model('User', Schema);
